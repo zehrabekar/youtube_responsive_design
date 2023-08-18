@@ -31,4 +31,15 @@ body {
   .f-list {
     background-color: #ebedf2;
   }
+
+  hr {
+    color: grey;
+  }
+
+  li:hover {
+    background-color: #ebedf2;
+    border-radius: 6px;
+    
+  }
+
     
