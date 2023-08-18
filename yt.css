@@ -1,0 +1,34 @@
+body {
+    padding-top: 56px; /* Header yüksekliği kadar boşluk bırak */
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 56px; /* Header yüksekliği */
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    background-color:black;
+    color: #2e2f30;
+    padding-top: 20px;
+    overflow-y: auto; /* Kaydırılabilirlik */
+  }
+  
+  .content {
+    margin-left: 250px; /* Sidebar genişliği */
+    padding: 20px;
+  }
+  
+  .sticky-buttons {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 56px; /* Header yüksekliği */
+    z-index: 1;
+    background-color: #f8f9fa;
+    padding: 10px;
+  }
+
+  .f-list {
+    background-color: #ebedf2;
+  }
+    
