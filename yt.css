@@ -42,4 +42,11 @@ body {
     
   }
 
-    
+  .buttons{
+    font-size: 14px;
+  }
+
+.card-body-text{
+  font-size: 14px;
+}
+
