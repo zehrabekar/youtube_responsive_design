@@ -54,3 +54,13 @@ body {
   font-size: 14px;
 }
 
+.buttons {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.buttons.active,
+.buttons:active,
+.buttons:focus {
+  background-color: black;
+  color: white;
+}

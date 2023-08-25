@@ -43,6 +43,18 @@
       document.querySelector('.show-less-btn').classList.add('d-none');
       document.querySelector('.show-more-btn').classList.remove('d-none');
     }
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".buttons");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+            buttons.forEach(btn => btn.classList.remove("active"));
+            this.classList.add("active");
+        });
+    });
+});
+
     
       </script>
   </head>
@@ -596,19 +608,19 @@
 
         <!-- butonlar -->
           <div class="sticky-buttons bg-white pt-1">
-              <div class="btn-group" role="group" aria-label="Horizontal buttons">
-                <button type="button" class="btn btn-dark me-3 rounded buttons">Tümü</button>
-                <button type="button" class="btn btn-light me-3 rounded buttons">Mix'ler</button>
-                <button type="button" class="btn btn-light me-3 rounded buttons">Müzik</button>
-                <button type="button" class="btn btn-light me-3 rounded buttons">Canlı</button>  
-                <button type="button" class="btn btn-light me-3 rounded buttons">Komedi Skeç Gösterileri</button>  
-                <button type="button" class="btn btn-light me-3 rounded buttons">Pembe Diziler</button>
-                <button type="button" class="btn btn-light me-3 rounded buttons">Turistik Yerler</button>  
-                <button type="button" class="btn btn-light me-3 rounded buttons">Yemek pişirme</button>
-                <button type="button" class="btn btn-light me-3 rounded buttons">Futbol</button>
-                <button type="button" class="btn btn-light me-3 rounded-1 buttons">Son yüklenenler</button>
-                <button type="button" class="btn btn-light me-3 rounded buttons">İzlenenler</button>
-                <button type="button" class="btn btn-light me-3 rounded buttons">Yeni öneriler</button>
+              <div class="btn-group" role="group" aria-label="Button group">
+                <button type="button" class="btn btn-light me-3 rounded buttons active" id="button1">Tümü</button>
+                <button type="button" class="btn btn-light me-3 rounded buttons" id="button2">Mix'ler</button>
+                <button type="button" class="btn btn-light me-3 rounded buttons" id="button3">Müzik</button>
+                <button type="button" class="btn btn-light me-3 rounded buttons" id="button4">Canlı</button>  
+                <button type="button" class="btn btn-light me-3 rounded buttons" id="button5">Komedi Skeç Gösterileri</button>  
+                <button type="button" class="btn btn-light me-3 rounded buttons" id="button6">Pembe Diziler</button>
+                <button type="button" class="btn btn-light me-3 rounded buttons" id="button7">Turistik Yerler</button>  
+                <button type="button" class="btn btn-light me-3 rounded buttons" id="button8">Yemek pişirme</button>
+                <button type="button" class="btn btn-light me-3 rounded buttons" id="button9">Futbol</button>
+                <button type="button" class="btn btn-light me-3 rounded buttons" id="button10">Son yüklenenler</button>
+                <button type="button" class="btn btn-light me-3 rounded buttons" id="button11">İzlenenler</button>
+                <button type="button" class="btn btn-light me-3 rounded buttons" id="button12">Yeni öneriler</button>
               </div>
           </div>
           
