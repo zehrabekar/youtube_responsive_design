@@ -64,3 +64,17 @@ body {
   background-color: black;
   color: white;
 }
+
+@media (max-width: 1199.98px) { 
+  #search {
+    display:none;
+  }
+}
+
+
+
+
+
+
+
+
