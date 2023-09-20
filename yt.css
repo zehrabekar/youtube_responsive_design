@@ -71,6 +71,33 @@ body {
   }
 }
 
+.button-container {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.button-container button {
+  margin-right: 10px;
+}
+
+.scroll-indicator {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  visibility: hidden; /* Başlangıçta gizli */
+}
+
+/* .scroll-indicator i {
+  font-size: 24px;
+  cursor: pointer;
+} */
+
+
+
 
 
 
