@@ -58,6 +58,15 @@
     });
 });
 
+const scrollButtonGroup = (direction) => {
+  const buttonGroup = document.querySelector('.button-group');
+  const scrollAmount = 200;
+  if (direction === 'left') {
+    buttonGroup.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  } else {
+    buttonGroup.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  }
+};
       </script>
   </head>
   <body>
@@ -620,8 +629,13 @@
   
       <div class="content pt-2">
 
-        <div class="sticky-buttons bg-white pt-1 button-container">
-          <div class="btn-group" role="group" aria-label="Button group">
+        <div class="sticky-buttons bg-white py-2 button-container d-flex ">
+          <button class="arrow-left bg-white me-3" onclick="scrollButtonGroup('left')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+            </svg>
+          </button>
+          <div class="button-group" role="group" aria-label="Button group">
             <button type="button" class="btn btn-light me-3 rounded buttons active" id="button1">Tümü</button>
             <button type="button" class="btn btn-light me-3 rounded buttons" id="button2">Mix'ler</button>
             <button type="button" class="btn btn-light me-3 rounded buttons" id="button3">Müzik</button>
@@ -633,9 +647,12 @@
             <button type="button" class="btn btn-light me-3 rounded buttons" id="button11">İzlenenler</button>
             <button type="button" class="btn btn-light me-3 rounded buttons" id="button12">Yeni öneriler</button>
           </div>
-
-          <div class="scroll-indicator"></div>
-      </div>
+          <button class="arrow-right bg-white" onclick="scrollButtonGroup('right')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+            </svg>
+          </button>
+        </div>
 
           <!-- card -->
 

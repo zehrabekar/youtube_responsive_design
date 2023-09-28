@@ -71,37 +71,35 @@ body {
   }
 }
 
-.button-container {
+.button-group {
   display: flex;
-  overflow-x: auto;
-  white-space: nowrap;
-  margin-bottom: 10px;
-  padding: 10px;
+  align-items: center;
+  overflow: auto; /* Yatay kaydırma */
+  white-space: nowrap; /* Butonların yan yana sıralanmasını sağla */
+  flex-wrap: nowrap; /* Butonların yan yana sıralanmasını sağla */
 }
 
-.button-container button {
-  margin-right: 10px;
-}
 
-.scroll-indicator {
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  visibility: hidden; /* Başlangıçta gizli */
-}
-
-/* .scroll-indicator i {
-  font-size: 24px;
+.arrow-left, .arrow-right {
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  border: none;
   cursor: pointer;
-} */
+}
 
+.arrow-left, .arrow-right {
+  display: none; /* Başlangıçta butonu gizle */
+}
 
+/*butonlar ekrana sığmamaya başladığında  yatay kaydırılabilmesi için oklar görünmeye başlıyor*/
+@media (max-width: 1305px) {
+  .arrow-left, .arrow-right {
+    display: block; /* Butonu görünür yap */
+  }
+}
 
-
-
-
-
-
-
-
+/* WebKit tabanlı tarayıcılarda kaydırma işareti gizleme */
+.button-group::-webkit-scrollbar {
+  display: none; /* Kaydırma işareti gizle */
+}
