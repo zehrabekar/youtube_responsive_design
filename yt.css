@@ -94,7 +94,7 @@ body {
 
 /*butonlar ekrana sığmamaya başladığında  yatay kaydırılabilmesi için oklar görünmeye başlıyor*/
 @media (max-width: 1305px) {
-  .arrow-left, .arrow-right {
+  .arrow-right {
     display: block; /* Butonu görünür yap */
   }
 }
@@ -103,3 +103,4 @@ body {
 .button-group::-webkit-scrollbar {
   display: none; /* Kaydırma işareti gizle */
 }
+
