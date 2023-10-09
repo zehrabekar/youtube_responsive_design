@@ -104,3 +104,54 @@ body {
   display: none; /* Kaydırma işareti gizle */
 }
 
+
+@media (max-width: 430px) { 
+
+  .bell {
+    display: none;
+  }
+
+  .microphone {
+    display: none;
+  }
+ }
+
+/* Custom styles for sidebar */
+.sidebar {
+  background-color: #ccc;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar .nav-link {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .nav-link i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 1200px) {
+  .sidebar .nav-link i {
+    font-size: 24px;
+    
+  }
+
+  .sidebar .nav-link span {
+    font-size: 12px;
+  }
+
+  .sidebar .nav-link {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar {
+    width: 100px; /* Change the width to 100px */
+  }
+}
+
+
