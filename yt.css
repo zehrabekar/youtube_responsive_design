@@ -17,6 +17,7 @@ body {
     text-overflow: ellipsis; /* Taşan içeriği ... şeklinde kırp */
   }
 
+  /* anasayfa öğesi seçiliymiş gibi arka plan rengi */
   .f-list {
     background-color: #ebedf2;
   }
@@ -48,10 +49,9 @@ body {
     margin-left: 17px;
    }
 
-   .sidebar .nav-item .nav-link svg {
-    margin-left: 20px;
-   }
-
+  .button-font-size {
+    font-size: 14px;
+  }
 /* Media query for smaller screens */
 @media (max-width: 1200px) {
 
@@ -70,10 +70,18 @@ body {
   }
 
   .sidebar {
-    width: 100px; /* Change the width to 100px */
+    width: 120px; /* Change the width to 100px */
   }
-}
 
+  .sidebar hr{
+    display: none;
+  }
+
+  .big-screen {
+    display: none;
+  }
+
+}
 
 
 @media (max-width: 768px) {
