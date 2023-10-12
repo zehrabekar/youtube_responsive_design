@@ -30,22 +30,23 @@
     }
     
     function showMoreItems() {
-      const menuItems = document.querySelectorAll('.custom-menu li.d-none');
-      menuItems.forEach(item => {
-        item.classList.remove('d-none');
-      });
-      document.querySelector('.show-more-btn').classList.add('d-none');
-      document.querySelector('.show-less-btn').classList.remove('d-none');
-    }
-    
-    function hideItems() {
-      const menuItems = document.querySelectorAll('.custom-menu li:nth-child(n+10)');
-      menuItems.forEach(item => {
-        item.classList.add('d-none');
-      });
-      document.querySelector('.show-less-btn').classList.add('d-none');
-      document.querySelector('.show-more-btn').classList.remove('d-none');
-    }
+  const menuItems = document.querySelectorAll('.nav-item.d-none');
+  menuItems.forEach(item => {
+    item.classList.remove('d-none');
+  });
+  document.querySelector('.show-more-btn').classList.add('d-none');
+  document.querySelector('.show-less-btn').classList.remove('d-none');
+}
+
+function hideItems() {
+  const menuItems = document.querySelectorAll('.nav-item:nth-child(n+10)');
+  menuItems.forEach(item => {
+    item.classList.add('d-none');
+  });
+  document.querySelector('.show-less-btn').classList.add('d-none');
+  document.querySelector('.show-more-btn').classList.remove('d-none');
+}
+
 
     document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".buttons");
@@ -338,6 +339,7 @@ arrowLeftButton.addEventListener('click', () => scrollButtonGroup('left'));
 
            </ul>
 
+           <!-- 2.bölüm için daha fazla/az göster butonları -->
            <div class="d-flex">
 
             <button class="btn btn-transparent btn-show-more pb-0 big-screen" onclick="showMoreMenu()">
@@ -356,6 +358,104 @@ arrowLeftButton.addEventListener('click', () => scrollButtonGroup('left'));
            </div>
   
            <hr>
+
+           <ul class="nav flex-column custom-menu big-screen">
+
+            <h6 class="fw-normal ps-3 text-dark">Abonelikler</h6>
+
+            <li class="nav-item">
+              <a class="nav-link subscriptions" href="#">
+                <img draggable="false" class="rounded-circle" height="24" width="24" src="https://yt3.ggpht.com/ytc/AOPolaRJy0nDbhfflczyLxR08QLLzqzziVGvd_DQv-RKzw=s88-c-k-c0x00ffffff-no-rj">
+                <span>Murat Yücedağ</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link subscriptions" href="#">
+                <img draggable="false" class="rounded-circle" height="24" width="24" src="https://yt3.ggpht.com/ytc/AOPolaTU1AuGrUqanbugqwOlDdvstTfCStjawaZaxkHO3QY=s88-c-k-c0x00ffffff-no-rj">
+                <span>Adem İlter</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link subscriptions" href="#">
+                <img draggable="false" class="rounded-circle" height="24" width="24" src="https://yt3.ggpht.com/ytc/AOPolaTCV0EOmOKtzyTsdFgSNAp3sy2NXoM0qLObWa3IrA=s88-c-k-c0x00ffffff-no-rj">            
+                <span>Arin Yazılım</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link subscriptions" href="#">
+                <img draggable="false" class="rounded-circle" height="24" width="24" src="https://yt3.ggpht.com/ytc/AOPolaRoI962RC4NbeMqJJ-qGA37yozTJX1CPTVWyey_zg=s88-c-k-c0x00ffffff-no-rj">            
+                <span>Armağan Amcalar</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link subscriptions" href="#">
+                <img draggable="false" class="rounded-circle" height="24" width="24" src="https://yt3.ggpht.com/ytc/AOPolaQz_ZvirS0Rl1PiBPrFWhjyorJk4n6vjHwkVfhM=s88-c-k-c0x00ffffff-no-rj">            
+                <span>Cemre Sıla Atılgan</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link subscriptions" href="#">
+                <img draggable="false" class="rounded-circle" height="24" width="24" src="https://yt3.ggpht.com/ytc/AOPolaSMe-Ix53pNMoNL8WHJQmhRORN2t0L47DNqBWTD0A=s88-c-k-c0x00ffffff-no-rj">            
+                <span>Dilara Geyik Dişli</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link subscriptions" href="#">
+                <img draggable="false" class="rounded-circle" height="24" width="24" src="https://yt3.ggpht.com/JRCZuDiHwBqX9TPh79RbZbdeR7YodNdNh3VKieECmqVBqGQfhqQT5fPu9z_d0BmEx6fGQVUBLg=s88-c-k-c0x00ffffff-no-rj">            
+                <span>Murat Soner</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link subscriptions" href="#">
+                <img draggable="false" class="rounded-circle" height="24" width="24" src="https://yt3.ggpht.com/_ykYdZODIgNttuJsYnsKVimRW8LO0IRaBqlugclsH451OMSfc_a6XsvGutToidcCkqTCQX_8=s88-c-k-c0x00ffffff-no-rj">          
+                <span>BelkisTV</span>
+              </a>
+            </li>
+
+            <li class="nav-item d-none">
+              <a class="nav-link subscriptions" href="#">
+                <img draggable="false" class="rounded-circle" height="24" width="24" src="https://yt3.ggpht.com/ytc/AOPolaR72GxaTZqEczulqHeFruZPi_vrQ5w7Nw8NqgwxRA=s88-c-k-c0x00ffffff-no-rj">          
+                <span>Ruhi Çenet Medya</span>
+              </a>
+            </li>
+
+            <li class="nav-item d-none">
+              <a class="nav-link subscriptions" href="#">
+                <img  draggable="false" class="rounded-circle" height="24" width="24" src="https://yt3.ggpht.com/xqV-8ky3tvYqmMNasDp_uHVXIvas2J5VmiB8kj5Ws2jk4yU5osbSoghbCuzlhQNXrXw_S-cdPg=s88-c-k-c0x00ffffff-no-rj">          
+                <span>Mina Okabe</span>
+              </a>
+            </li>
+
+           </ul>
+
+           <!-- abonelikler bölümü için daha fazla/az göster butonları -->
+
+         <div class="d-flex">
+          <button class="btn btn-transaprent show-more-btn button-font-size pb-0 big-screen" onclick="showMoreItems()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down mx-2" viewBox="0 0 16 16">
+            <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+          </svg>
+          <p class="d-inline-block mb-0 button-font-size ms-1">Daha Fazla Göster</p>
+         
+        </button>
+          <button class="btn btn-transaprent show-less-btn d-none button-font-size pb-0 big-screen" onclick="hideItems()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up mx-2" viewBox="0 0 16 16">
+              <path d="M3.204 11h9.592L8 5.519 3.204 11zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z"/>
+            </svg>
+            <p class="d-inline-block mb-0 button-font-size ms-1">Daha Az Göster </p>
+          </button>
+         </div>
+      
+          <hr>
+
+
 
             
             

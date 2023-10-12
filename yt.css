@@ -13,9 +13,16 @@ body {
     padding: 20px;
     overflow-y: auto; /* Kaydırılabilirlik */
     white-space: nowrap; /* Kelimeleri alt alta değil, yan yana tut */
-    overflow: hidden; /* Taşan içeriği gizle */
-    text-overflow: ellipsis; /* Taşan içeriği ... şeklinde kırp */
   }
+/* 
+Taşan içeriği gizle 
+  overflow: hidden; 
+
+Taşan içeriği ... şeklinde kırp 
+text-overflow: ellipsis;  
+
+-bu kodları 1200 pxden küçük ekranlarda sidebardaki öğelerin isimleri için yazmıştım fakat sidebarın kaydırılabilir olmasını enegllediği için kaldırdım.
+*/
 
   /* anasayfa öğesi seçiliymiş gibi arka plan rengi */
   .f-list {
@@ -96,6 +103,10 @@ body {
 
 .sidebar .nav-item .nav-link svg {
   margin-left: 0px;
+ }
+
+ .sidebar .nav-item .subscriptions{
+  padding-left: 15px;
  }
 
 
