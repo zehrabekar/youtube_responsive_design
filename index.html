@@ -93,41 +93,6 @@ const arrowLeftButton = document.querySelector('.arrow-left');
 arrowLeftButton.addEventListener('click', () => scrollButtonGroup('left'));
 
 
-
-
-window.onresize = function() {
-  updateCardLayout();
-};
-
-function updateCardLayout() {
-  const windowWidth = window.innerWidth;
-
-  // Ekran genişliğine göre kart sayısını güncelle
-  const numCardsPerRow = windowWidth >= 768 ? 4 : 3;
-
-  const cards = document.querySelectorAll('.card');
-  const rows = Math.ceil(cards.length / numCardsPerRow);
-
-  let content = document.querySelector('.content');
-  content.innerHTML = ''; // İçeriği temizle
-
-  for (let i = 0; i < rows; i++) {
-    let row = document.createElement('div');
-    row.classList.add('row');
-
-    for (let j = i * numCardsPerRow; j < (i + 1) * numCardsPerRow && j < cards.length; j++) {
-      row.appendChild(cards[j]);
-    }
-
-    content.appendChild(row);
-  }
-}
-
-// Sayfa yüklendiğinde ve boyut değiştikçe çağır
-updateCardLayout();
-
-
-
       </script>
   </head>
   <body>
