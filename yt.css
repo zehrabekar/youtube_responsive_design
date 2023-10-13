@@ -109,7 +109,6 @@ text-overflow: ellipsis;
 
 }
 
-
 @media (max-width: 768px) {
   .sidebar {
     display: none;
@@ -134,6 +133,21 @@ text-overflow: ellipsis;
   margin-left: 250px; /* Sidebar genişliği */
   padding: 20px;
 }
+
+/* sidebar genişliğine göre content alanının kaplayacağı alanlar */
+
+@media (max-width: 1200px) {
+  .content {
+    margin-left: 130px;
+  }
+  }
+
+  @media (max-width: 768px) {
+    .content {
+      margin-left: 20px;
+    }
+  }
+
 
 .sticky-buttons {
   position: -webkit-sticky;
@@ -212,4 +226,45 @@ display: none; /* Kaydırma işareti gizle */
 .microphone {
   display: none;
 }
+}
+
+/* Genel kart ve satır stil tanımlamaları */
+.card {
+  width: 18%; /* Kartların genişliği, bir satırda 5 kart için */
+  float: left; /* Kartları yan yana sırala */
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Media queries ile ekran boyutlarına göre düzenlemeler */
+@media (max-width: 1918px) {
+  .card {
+    width: 23%; /* Kartların genişliği, bir satırda 4 kart için */
+  }
+}
+
+@media (max-width: 1491px) {
+  .card {
+    width: 30%; /* Kartların genişliği, bir satırda 3 kart için */
+  }
+}
+
+@media (max-width: 1000px) {
+  .card {
+    width: 46%; /* Kartların genişliği, bir satırda 2 kart için */
+  }
+}
+
+@media (max-width: 668px) {
+  .card {
+    width: 100%; /* Kartların genişliği, bir satırda 1 kart için */
+  }
 }
