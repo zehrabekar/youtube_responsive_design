@@ -31,7 +31,5 @@
   ![1card-8](https://github.com/zehrabekar/youtube_responsive_design/assets/93613471/4a082a0c-9aa3-44be-9187-b39b96224aeb)
 
 </p>
-<p>[source1](https://www.youtube.com/)
-<br><br>
-[source2](https://getbootstrap.com/)</p>
+[source](www.youtube.com)
 
