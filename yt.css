@@ -134,6 +134,12 @@ text-overflow: ellipsis;
   padding: 20px;
 }
 
+.content .card{
+  border: none;
+  padding: 0px;
+  padding-top: 15px;
+}
+
 /* sidebar genişliğine göre content alanının kaplayacağı alanlar */
 
 @media (max-width: 1200px) {
@@ -145,6 +151,7 @@ text-overflow: ellipsis;
   @media (max-width: 768px) {
     .content {
       margin-left: 20px;
+      margin-right: 20px;
     }
   }
 
