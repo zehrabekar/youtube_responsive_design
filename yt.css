@@ -10,24 +10,22 @@ body {
     width: 250px;
     background-color:white;
     color: #2e2f30;
-    padding-top: 20px;
-    overflow-y: auto; /* Kaydırılabilirlik */
-  }
-  
-  .content {
-    margin-left: 250px; /* Sidebar genişliği */
     padding: 20px;
+    padding-bottom: 5px;
+    overflow-y: auto; /* Kaydırılabilirlik */
+    white-space: nowrap; /* Kelimeleri alt alta değil, yan yana tut */
   }
-  
-  .sticky-buttons {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 52px; /* Header yüksekliği */
-    z-index: 1;
-    background-color: #f8f9fa;
-    padding: 10px;
-  }
+/* 
+Taşan içeriği gizle 
+  overflow: hidden; 
 
+Taşan içeriği ... şeklinde kırp 
+text-overflow: ellipsis;  
+
+-bu kodları 1200 pxden küçük ekranlarda sidebardaki öğelerin isimleri için yazmıştım fakat sidebarın kaydırılabilir olmasını enegllediği için kaldırdım.
+*/
+
+  /* anasayfa öğesi seçiliymiş gibi arka plan rengi */
   .f-list {
     background-color: #ebedf2;
   }
@@ -42,25 +40,238 @@ body {
     
   }
 
-  .buttons{
+  .sidebar .nav-link {
+    display: flex;
+    align-items: center;
+  }
+
+  .sidebar .nav-item a{
+    color:#2e2f30;
+    padding-left: 20px;
+    padding-right: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .sidebar .nav-item .nav-link span {
+    margin-left: 17px;
+   }
+
+  .button-font-size {
     font-size: 14px;
   }
 
-.card-body-text{
+.sentence{
+  white-space: normal;
+}
+
+.links{
+  white-space: normal;
+  font-size: 13px;
+  margin-left: 15px;
+}
+
+.links a{
+  margin-right: 3px;
+  color: rgb(126, 118, 118);
+  text-decoration: none;
+  font-weight: bold;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+/* Media query for smaller screens */
+@media (max-width: 1200px) {
+
+  .sidebar .nav-item a{
+    padding-left: 0px;
+  }
+
+  .sidebar .nav-item .nav-link span {
+    font-size: 12px;
+    margin-left: 0px;
+   }
+
+  .sidebar .nav-link {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar {
+    width: 120px; /* Change the width to 100px */
+  }
+
+  .sidebar hr{
+    display: none;
+  }
+
+  .big-screen {
+    display: none;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+.sidebar .nav-item span {
   font-size: 14px;
 }
 
-.list-item {
+.sidebar .nav-item .nav-link svg {
+  margin-left: 0px;
+ }
+
+ .sidebar .nav-item .subscriptions{
+  padding-left: 15px;
+ }
+
+
+
+.content {
+  margin-left: 250px; /* Sidebar genişliği */
+  padding: 20px;
+}
+
+.content .card{
+  border: none;
+  padding: 0px;
+  padding-top: 15px;
+}
+
+/* sidebar genişliğine göre content alanının kaplayacağı alanlar */
+
+@media (max-width: 1200px) {
+  .content {
+    margin-left: 130px;
+  }
+  }
+
+  @media (max-width: 768px) {
+    .content {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+
+
+.sticky-buttons {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 52px; /* Header yüksekliği */
+  z-index: 1;
+  background-color: #f8f9fa;
+  padding: 10px;
+}
+
+.buttons{
   font-size: 14px;
+}
+
+.card-body-text{
+font-size: 14px;
 }
 
 .buttons {
-  transition: background-color 0.3s, color 0.3s;
+transition: background-color 0.3s, color 0.3s;
 }
 
 .buttons.active,
 .buttons:active,
 .buttons:focus {
-  background-color: black;
-  color: white;
+background-color: black;
+color: white;
+}
+
+@media (max-width: 1199.98px) { 
+#search {
+  display:none;
+}
+}
+
+.button-group {
+display: flex;
+align-items: center;
+overflow: auto; /* Yatay kaydırma */
+white-space: nowrap; /* Butonların yan yana sıralanmasını sağla */
+flex-wrap: nowrap; /* Butonların yan yana sıralanmasını sağla */
+}
+
+
+.arrow-left, .arrow-right {
+width: 30px;
+height: 30px;
+background-color: #ccc;
+border: none;
+cursor: pointer;
+}
+
+.arrow-left, .arrow-right {
+display: none; /* Başlangıçta butonu gizle */
+}
+
+/*butonlar ekrana sığmamaya başladığında  yatay kaydırılabilmesi için oklar görünmeye başlıyor*/
+@media (max-width: 1305px) {
+.arrow-right {
+  display: block; /* Butonu görünür yap */
+}
+}
+
+/* WebKit tabanlı tarayıcılarda kaydırma işareti gizleme */
+.button-group::-webkit-scrollbar {
+display: none; /* Kaydırma işareti gizle */
+}
+
+
+@media (max-width: 430px) { 
+
+.bell {
+  display: none;
+}
+
+.microphone {
+  display: none;
+}
+}
+
+/* Genel kart ve satır stil tanımlamaları */
+.card {
+  width: 18%; /* Kartların genişliği, bir satırda 5 kart için */
+  float: left; /* Kartları yan yana sırala */
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Media queries ile ekran boyutlarına göre düzenlemeler */
+@media (max-width: 1918px) {
+  .card {
+    width: 23%; /* Kartların genişliği, bir satırda 4 kart için */
+  }
+}
+
+@media (max-width: 1491px) {
+  .card {
+    width: 30%; /* Kartların genişliği, bir satırda 3 kart için */
+  }
+}
+
+@media (max-width: 1000px) {
+  .card {
+    width: 46%; /* Kartların genişliği, bir satırda 2 kart için */
+  }
+}
+
+@media (max-width: 668px) {
+  .card {
+    width: 100%; /* Kartların genişliği, bir satırda 1 kart için */
+  }
 }
